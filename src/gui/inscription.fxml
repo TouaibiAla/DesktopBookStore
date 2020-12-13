@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlles.InscriptionController">
+   <children>
+      <VBox layoutY="-4.0" prefHeight="556.0" prefWidth="357.0" style="-fx-background-color: #61c4f2;" />
+      <VBox alignment="CENTER" layoutX="359.0" layoutY="-1.0" prefHeight="549.0" prefWidth="505.0">
+         <children>
+            <AnchorPane prefHeight="547.0" prefWidth="505.0">
+               <children>
+                  <JFXTextField fx:id="name" layoutX="127.0" layoutY="65.0" prefHeight="25.0" prefWidth="258.0" />
+                  <Label layoutX="125.0" layoutY="29.0" prefHeight="17.0" prefWidth="67.0" text="Name">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="359.0" layoutY="493.0" onAction="#addUser" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #61c4f2;" text="Sign up" textFill="#fcf7f7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXTextField fx:id="lastname" layoutX="134.0" layoutY="158.0" prefHeight="25.0" prefWidth="258.0" />
+                  <Label layoutX="132.0" layoutY="122.0" prefHeight="27.0" prefWidth="100.0" text="Last Name">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="phonenumber" layoutX="135.0" layoutY="267.0" prefHeight="25.0" prefWidth="258.0" />
+                  <Label layoutX="133.0" layoutY="231.0" prefHeight="27.0" prefWidth="134.0" text="Phone Number">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="mail" layoutX="136.0" layoutY="357.0" prefHeight="25.0" prefWidth="258.0" />
+                  <Label layoutX="134.0" layoutY="321.0" prefHeight="17.0" prefWidth="67.0" text="Mail">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="password" layoutX="132.0" layoutY="442.0" prefHeight="25.0" prefWidth="273.0" />
+                  <Label layoutX="132.0" layoutY="415.0" prefHeight="27.0" prefWidth="93.0" text="Password">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
