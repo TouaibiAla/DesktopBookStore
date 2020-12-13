@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlles.LivreurLivraisonController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="572.0" prefWidth="172.0" style="-fx-background-color: #61c4f2;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="49.0" prefWidth="173.0" ripplerFill="#0915fc" style="-fx-border-color: #61c4f2;" text="Dashbord" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" prefHeight="46.0" prefWidth="172.0" ripplerFill="#0915fc" style="-fx-background-color: #ffffff;" text="Consulter les Livraisons" textFill="#61c4f2">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="880.0" style="-fx-background-color: #61c4f2;">
+                     <children>
+                        <Label layoutX="22.0" layoutY="8.0" prefHeight="34.0" prefWidth="152.0" text="BOOKSTORE" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox prefHeight="450.0" prefWidth="585.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="572.0" prefWidth="709.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutY="544.0" prefHeight="28.0" prefWidth="702.0">
+                           <children>
+                              <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="157.0" text="Copyright CACTUS TEAM">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tvlivraisons" layoutX="23.0" layoutY="44.0" onMouseClicked="#handleMouseAction" prefHeight="430.0" prefWidth="657.0" styleClass="table-view">
+                          <columns>
+                            <TableColumn fx:id="colidlivraison" prefWidth="33.0" styleClass="column-1" text="id" />
+                            <TableColumn fx:id="coldatelivraison" prefWidth="106.0" text="Date Livraison" />
+                              <TableColumn fx:id="coladresse" prefWidth="210.0" styleClass="column-1" text="Adresse" />
+                              <TableColumn fx:id="coletat" prefWidth="75.0" styleClass="column-1" text="Etat" />
+                              <TableColumn fx:id="colcommande" prefWidth="231.0" styleClass="column-1" text="Commande" />
+                          </columns>
+                        </TableView>
+                        <Label contentDisplay="CENTER" layoutX="249.0" layoutY="4.0" prefHeight="20.0" prefWidth="169.0" text="Consulter les Livraisons" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="593.0" layoutY="493.0" onAction="#terminerLivraison" prefHeight="25.0" prefWidth="87.0" styleClass="buttonBlue" text="Terminer" />
+                        <JFXButton layoutX="477.0" layoutY="493.0" onAction="#commencerLivraison" prefHeight="25.0" prefWidth="87.0" styleClass="buttonBlue" text="Commencer" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
