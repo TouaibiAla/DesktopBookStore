@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlles.DetailCommandeController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="880.0" style="-fx-background-color: #61c4f2;">
+                     <children>
+                        <Label layoutX="324.0" layoutY="3.0" text="Détails Commande" textFill="#f2f2f2">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox prefHeight="450.0" prefWidth="585.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="574.0" prefWidth="872.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutY="544.0" prefHeight="28.0" prefWidth="873.0">
+                           <children>
+                              <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="157.0" text="Copyright CACTUS TEAM">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tables" layoutX="412.0" layoutY="74.0" prefHeight="431.0" prefWidth="436.0" styleClass="table-view">
+                          <columns>
+                            <TableColumn fx:id="nomLivre" prefWidth="172.0" styleClass="column-1" text="Livre" />
+                            <TableColumn fx:id="prix" prefWidth="193.0" text=" Prix (DT)" />
+                              <TableColumn fx:id="quantite" prefWidth="69.0" text="Quantite" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="41.0" layoutY="152.0" prefHeight="17.0" prefWidth="51.0" text="Nom :">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="184.0" prefHeight="27.0" prefWidth="93.0" text="Prénom :">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="220.0" prefHeight="27.0" prefWidth="66.0" text="Email :">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="252.0" prefHeight="27.0" prefWidth="101.0" text="Télephone :">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nom" layoutX="104.0" layoutY="152.0" prefWidth="83.0">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="prenom" layoutX="118.0" layoutY="184.0" prefHeight="27.0" prefWidth="73.0">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="email" layoutX="108.0" layoutY="220.0">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Tel" layoutX="138.0" layoutY="252.0">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="74.0" prefHeight="54.0" prefWidth="317.0" style="-fx-background-color: #61c4f2;" text="Client" textFill="#f8f8f8">
+                           <font>
+                              <Font name="System Bold Italic" size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
