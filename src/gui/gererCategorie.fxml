@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlles.GererCategorieController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="572.0" prefWidth="172.0" style="-fx-background-color: #61c4f2;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="bDashbord" alignment="TOP_LEFT" contentDisplay="RIGHT" onAction="#toDashbord" prefHeight="49.0" prefWidth="173.0" ripplerFill="#0915fc" style="-fx-border-color: #61c4f2;" text="Dashbord" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="bLivre" alignment="TOP_LEFT" onAction="#toLivre" prefHeight="51.0" prefWidth="172.0" ripplerFill="#0915fc" style="-fx-border-color: #61c4f2;" text="Gérer les livres" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" prefHeight="53.0" prefWidth="172.0" ripplerFill="#0915fc" style="-fx-background-color: #ffffffff;" text="Gérer les catégories" textFill="#61c4f2">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="bCommande" alignment="TOP_LEFT" onAction="#toCommande" prefHeight="47.0" prefWidth="172.0" ripplerFill="#0915fc" text="Gérer les commandes" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="bReclam" alignment="TOP_LEFT" onAction="#toReclam" prefHeight="46.0" prefWidth="172.0" ripplerFill="#0915fc" style="-fx-border-color: #61c4f2;" text="Consulter les Recalamtions" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </JFXButton>
+                   <JFXButton fx:id="bLivreur" alignment="TOP_LEFT" onAction="#toLivreur" prefHeight="46.0" prefWidth="172.0" ripplerFill="#0915fc" style="-fx-background-color: #61c4f2;" text="Gérer les Livreurs" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="880.0" style="-fx-background-color: #61c4f2;">
+                     <children>
+                        <Label layoutX="22.0" layoutY="8.0" prefHeight="34.0" prefWidth="152.0" text="BOOKSTORE" textFill="WHITE">
+                           <font>
+                              <Font name="Agency FB Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox prefHeight="450.0" prefWidth="585.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="501.0" prefWidth="700.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutY="544.0" prefHeight="28.0" prefWidth="702.0">
+                           <children>
+                              <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="157.0" text="Copyright CACTUS TEAM">
+                                 <font>
+                                    <Font name="System Bold Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tvcategorie" layoutX="37.0" layoutY="54.0" onMouseClicked="#handleMouseAction" prefHeight="430.0" prefWidth="323.0" styleClass="table-view">
+                          <columns>
+                            <TableColumn fx:id="coId" prefWidth="161.0" styleClass="column-1" text="id" />
+                            <TableColumn fx:id="coLabel" prefWidth="196.0" text="Libelle" />
+                          </columns>
+                        </TableView>
+                        <Label contentDisplay="CENTER" layoutX="249.0" layoutY="4.0" prefHeight="20.0" prefWidth="169.0" text="Gérer les catégories" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="588.0" layoutY="459.0" onAction="#addCatégorie" prefHeight="25.0" prefWidth="87.0" styleClass="buttonBlue" text="Ajouter" />
+                        <JFXButton layoutX="477.0" layoutY="459.0" onAction="#removeCategorie" prefHeight="25.0" prefWidth="87.0" styleClass="buttonBlue" text="Supprimer" />
+                        <JFXTextField fx:id="Label" layoutX="510.0" layoutY="241.0" />
+                        <Label layoutX="432.0" layoutY="247.0" prefHeight="17.0" prefWidth="66.0" text="Libellé :">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="375.0" layoutY="459.0" onAction="#updateCatégorie" prefHeight="25.0" prefWidth="87.0" styleClass="buttonBlue" text="Modifier" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
